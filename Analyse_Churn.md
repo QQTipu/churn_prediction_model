@@ -7,6 +7,19 @@ Thibaut Fortuné
 
 # 0. Import des packages
 
+``` r
+library("tidyverse")
+library("caret")
+library("PCAmixdata")
+library("ggplot2")
+library(GGally)
+library(PCAmixdata)
+library(cluster)
+library(WeightedCluster)
+library(gtsummary)
+library(questionr)
+```
+
 ------------------------------------------------------------------------
 
 # 1. Préparation des données
@@ -977,7 +990,14 @@ data_opti <- data %>% bind_cols(pca_new_coords)
 ```
 
 ## 3.b. Sélection des données à garder
+``` r
+var.all.eco <- c("id", "subscribed", "age.lab", "marital", "job", "education", "Nom.Officiel.Région", "default", "housing", "loan", "contact", "season", "day.of.week", "campaign.lab", "previous.lab", "pdays.lab", "emp.var.rate", "cons.price.idx", "cons.conf.idx", "euribor3m", "nr.employed", "base_a_predire")
 
+var.opti.eco <- c("id", "subscribed", "age.lab", "marital", "job", "education", "Nom.Officiel.Région", "default", "housing", "loan", "contact", "season", "day.of.week", "campaign.lab", "previous.lab", "pdays.lab", "pca_economic_dim1", "pca_economic_dim2", "pca_economic_dim3", "base_a_predire")
+
+data_eco_all <- data_opti %>% select(var.all.eco)
+data_eco_opti <- data_opti %>% select(var.opti.eco)
+```
 ------------------------------------------------------------------------
 
 # 4. Mise en place du modèle de prédiction
