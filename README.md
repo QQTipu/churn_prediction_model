@@ -12,4 +12,4 @@ Retrouvez les étapes de cette études [ici](https://github.com/QQTipu/churn_pre
 - 6. [Prédiction](https://github.com/QQTipu/churn_prediction_model/blob/main/Analyse_Churn.md#6-pr%C3%A9diction)
 - 7. [Réalisation d'un clustering](https://github.com/QQTipu/churn_prediction_model/blob/main/Analyse_Churn.md#7-r%C3%A9alisation-dun-clustering)
 
-**L'ensemble des données est disponible [ici]().*
+**L'ensemble des données est disponible [ici](https://github.com/QQTipu/churn_prediction_model/blob/276377d581fbe1fe9f71cf0c493bab6c707075ed/data/data_projet_2.txt).*
